@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import DigitalDisplay from './DigitalDisplay';
+import AnalogDisplay from './AnalogDisplay';
 
 class App extends Component {
   constructor(props){
@@ -25,7 +27,8 @@ class App extends Component {
           <h1 className="App-title">Welcome to the Clock App</h1>
         </header>
         <p className="App-intro">
-          {this.state.currentTime}
+          <AnalogDisplay time={this.state.currentTime}/>
+          <DigitalDisplay time = {this.state.currentTime}/>
         </p>
       </div>
     );
